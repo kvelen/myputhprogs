@@ -3,14 +3,14 @@ import mongomock
 # import urllibrequest
 
 # client = MongoClient('mongodb://root:cdfa907be86f74b3e4358565ca@178.128.34.111:27017')
-texts = MongoClient('mongodb://178.128.34.111:27017').db.texts
+# texts = MongoClient('mongodb://178.128.34.111:27017').db.texts
 # for db in client.list_database_names():
 #     print(db)
 
 import os
 import json
 
-# texts = mongomock.MongoClient().db.texts
+texts = mongomock.MongoClient().db.texts  # db - databasename, texts -  collection name in database db
 
 with open(os.path.join(os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__))), 'sample_text.json'), 'rb') as fp:
     data = json.load(fp)
